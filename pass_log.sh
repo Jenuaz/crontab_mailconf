@@ -1,11 +1,9 @@
 #!/bin/bash
-stty -echo
 printf "Email: "
-while read -r EMAIL 
-do
-	echo "$EMAIL"
-done < <$(find . -type f)
-printf "Password: "
+read EMAIL
+stty -echo
+printf "Password:  "
 read PASSWORD
 stty echo
-printf $PASSWORD 
+echo "AuthUser=$EMAIL" >> /etc/ssmtp/ssmtp.conf
+echo "AuthPass=$PASSWORD" >> /etc/ssmtp/ssmtp.conf
