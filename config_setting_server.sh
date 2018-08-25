@@ -5,3 +5,5 @@ wtgo=/etc/ssmtp
 #sed 's/mailhub=mail/mailhub=smtp.gmail.com/' $wtgo/ssmtp.conf >> $wtgo/ssmtp.conf
 #sed 's/hostname/\#hostnmae/' $wtgo/ssmtp.conf >> $wtgo/ssmtp.conf
 sed -i -e 's/root/\#root/' -e 's/\#From/From/' -e 's/mailhub=mail/mailhub=smtp.gmail.com/' -e 's/hostname/\#hostnmae/' $wtgo/ssmtp.conf
+echo "root:jenuaz@gmail.com:smtp.gmail.com" >> $wtgo/revaliases
+echo "UseSTARTTLS=YES" >> $wtgo/ssmtp.conf
