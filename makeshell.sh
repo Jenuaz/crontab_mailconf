@@ -1,4 +1,4 @@
-for SCRIPT in ./install_tools.sh ./config_setting_server.sh ./create_script.sh ./set_setting_crontab.sh ./pass_log.sh
+for SCRIPT in ./instal_tools.sh ./config_setting_server.sh ./create_script.sh ./set_setting_crontab.sh ./pass_log.sh
 do
 $SCRIPT
 done
